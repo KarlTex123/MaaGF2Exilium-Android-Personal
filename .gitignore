@@ -463,3 +463,24 @@ mermaid.mmd
 /Android/agent-dist/
 *.jks
 *.keystore
+
+# Personal deployment data, credentials and generated packages
+/outputs/
+/work/
+/.local/
+.env
+.env.*
+*.apk
+*.apks
+*.aab
+*.pem
+*.key
+*.p12
+*.pfx
+*.jsonl
+**/local.properties
+**/user_configuration.json
+**/app_settings.preferences_pb
+/screenshots/
+/device-logs/
+/.venv/

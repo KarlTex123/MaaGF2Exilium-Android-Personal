@@ -1,4 +1,4 @@
-"""Build latest MaaFramework and matching Android Python runtimes.
+"""Build a pinned MaaFramework and matching Android Python runtimes.
 
 Run with Python >=3.11, pip and uv installed. Agent dependencies come from
 pyproject.toml's project.dependencies; desktop requirements.txt supplies version
@@ -112,7 +112,7 @@ def resolve_dependencies(root, manifest, abi, directory):
     return requirements, index
 
 
-def build_runtime(abis, root=ROOT):
+def build_runtime(abis, root=ROOT, framework_tag="v5.14.3"):
     if not abis or len(set(abis)) != len(abis) or not set(abis) <= PLATFORMS.keys():
         raise ValueError("abis must contain arm64-v8a and/or x86_64, without duplicates")
     frontend = root / "Android" / "MaaFwApp"
@@ -124,14 +124,16 @@ def build_runtime(abis, root=ROOT):
     if output.exists():
         shutil.rmtree(output)
 
-    # Resolve latest once; force deployment because the downloader's fast path
+    # Pin the validated release; force deployment because the downloader's fast path
     # compares file sizes, which cannot distinguish equal-sized library versions.
     subprocess.run([
         sys.executable, str(frontend / "scripts" / "setup_maa_framework.py"),
-        "--force",
+        "--force", "--tag", framework_tag,
         "--abi", "all" if len(abis) == 2 else abis[0],
     ], cwd=frontend, check=True)
     version = (frontend / ".maafwversion").read_text(encoding="utf-8").strip().removeprefix("v")
+    if version != framework_tag.removeprefix("v"):
+        raise RuntimeError(f"Expected MaaFramework {framework_tag}, got {version}")
     helpers = runpy.run_path(str(builder))
     python_version = helpers["CORE_PY"]
     core_tag = f"{python_version}-maafw{version}"
@@ -154,5 +156,6 @@ def build_runtime(abis, root=ROOT):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--abis", default="arm64-v8a", help="Comma-separated APK ABIs")
+    parser.add_argument("--framework-tag", default="v5.14.3", help="Validated MaaFramework release tag")
     args = parser.parse_args()
-    build_runtime(args.abis.split(","))
+    build_runtime(args.abis.split(","), framework_tag=args.framework_tag)

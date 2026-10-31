@@ -77,6 +77,8 @@ jobs:
           python-version: "3.13"
       - name: Install Android dependency resolver
         run: python -m pip install "uv==0.12.16"
+      - name: Apply maintained Android frontend patches
+        run: python Android/apply_patches.py
       - name: Stage Android resources and OCR models
         run: |
           # Tag releases use the supplied version; other APKs use MaaFwApp's Git versioning.
@@ -87,7 +89,7 @@ jobs:
       - name: Build matching MaaFramework and Python agent runtime
         env:
           GITHUB_TOKEN: ${{ github.token }}
-        run: python Android/build_runtime.py --abis "$ABIS"
+        run: python Android/build_runtime.py --abis "$ABIS" --framework-tag v5.14.3
       - name: Configure Android build
         working-directory: Android/MaaFwApp
         run: |

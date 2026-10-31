@@ -9,7 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 AGENT_ENTRY = "agent/main.py"
-OCR_MODEL = "small"  # The medium model makes OCR take tens of seconds on phones.
+OCR_MODEL = "tiny"  # Phone replay: ~3x faster than small on full-screen Chinese UI.
 
 
 def read_json(path):
@@ -111,6 +111,22 @@ def prepare(root=ROOT, version="v0.0.0-dev", repository="DarkLingYun/MaaGF2Exili
             if relative not in copied:
                 shutil.copytree(root / "assets" / relative, output / relative, dirs_exist_ok=True)
                 copied.add(relative)
+    # Device-specific navigation and speed fixes stay out of desktop resources.
+    override_file = root / "Android" / "mobile-overrides.json"
+    if override_file.is_file():
+        overrides = read_json(override_file)
+        remaining = dict(overrides)
+        pipeline = output / "resource" / "base" / "pipeline"
+        for path in pipeline.rglob("*.json"):
+            data = read_json(path)
+            changed = False
+            for name in data.keys() & remaining.keys():
+                data[name].update(remaining.pop(name))
+                changed = True
+            if changed:
+                write_json(path, data)
+        if remaining:
+            write_json(pipeline / "mobile-local.json", remaining)
     ocr = root / "assets" / "MaaCommonAssets" / "OCR" / "ppocr_v6" / OCR_MODEL
     for name in ("det.onnx", "rec.onnx", "keys.txt"):
         if not (ocr / name).is_file():

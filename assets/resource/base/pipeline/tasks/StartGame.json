@@ -4,6 +4,8 @@
         "timeout": 150000,
         "rate_limit": 3000,
         "next": [
+            "[JumpBack]dismissVoyageFirstIntro",
+            "StartGame_HomePage_Check",
             "[JumpBack]StartGame_loading",
             "[JumpBack]clickCloseWindowButton",
             "[JumpBack]clickHomeButton",
@@ -11,7 +13,6 @@
             "[JumpBack]点击空白处关闭-通用",
             "[JumpBack]指挥官等级提升-通用",
             "[JumpBack]退出活动层-活动层通用",
-            "StartGame_HomePage_Check",
             "[JumpBack]StartGame_loadingSource",
             "[JumpBack]StartGame_retryLogin",
             "StartGame_notLoginIn",
@@ -28,15 +29,7 @@
             "Node.Action.Starting": "已进入游戏主页"
         },
         "recognition": "OCR",
-        "pre_wait_freezes": {
-            "time": 2000,
-            "target": [
-                0,
-                0,
-                337,
-                109
-            ]
-        },
+        "roi": [1000, 30, 280, 120],
         "expected": "战役推进"
     },
     "StartGame_loadingSource": {
@@ -52,11 +45,13 @@
             "击开始$",
             "点击开"
         ],
-        "action": "Click"
+        "action": "Click",
+        "post_delay": 3000,
+        "max_hit": 3
     },
     "openGF2GameApp": {
         "action": "StartApp",
-        "max_hit": 100,
+        "max_hit": 3,
         "package": "com.Sunborn.SnqxExilium/.ExiliumMainActivity"
     },
     "StartGame_downloadResource": {

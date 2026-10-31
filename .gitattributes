@@ -1,0 +1,4 @@
+# Patch context includes single-space empty lines; keep patches portable.
+*.patch text eol=lf -whitespace
+# Preserve upstream Markdown hard line breaks in the attribution copy.
+README.upstream.md -whitespace

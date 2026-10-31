@@ -1,0 +1,1808 @@
+{
+  "StartGame_clickStart": {
+    "roi": [
+      460,
+      560,
+      350,
+      80
+    ],
+    "post_delay": 1800
+  },
+  "clickBackButton": {
+    "roi": [
+      0,
+      0,
+      180,
+      140
+    ],
+    "post_wait_freezes": {
+      "time": 250,
+      "target": true,
+      "rate_limit": 100,
+      "timeout": 2500
+    }
+  },
+  "进入活动页面-活动通用": {
+    "roi": [
+      641,
+      605,
+      207,
+      115
+    ],
+    "post_wait_freezes": {
+      "time": 250,
+      "rate_limit": 100,
+      "timeout": 2500
+    }
+  },
+  "clickCloseWindowButton": {
+    "roi": [
+      800,
+      0,
+      480,
+      280
+    ],
+    "post_wait_freezes": {
+      "time": 250,
+      "target": true,
+      "rate_limit": 100,
+      "timeout": 2500
+    }
+  },
+  "findSurveyEmail": {
+    "roi": [
+      8,
+      411,
+      374,
+      127
+    ],
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "enterShop": {
+    "roi": [
+      1074,
+      413,
+      206,
+      135
+    ]
+  },
+  "inShop": {
+    "roi": [
+      0,
+      83,
+      238,
+      128
+    ],
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "enterQualitySelection": {
+    "roi": [
+      0,
+      255,
+      240,
+      128
+    ]
+  },
+  "inQualitySelection": {
+    "roi": [
+      430,
+      53,
+      247,
+      128
+    ],
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "confirmSupplyBoxPurchase": {
+    "roi": [
+      745,
+      538,
+      212,
+      131
+    ],
+    "post_wait_freezes": {
+      "time": 250,
+      "rate_limit": 100,
+      "timeout": 2500
+    }
+  },
+  "closeSupplyBoxPurchaseResultPage": {
+    "roi": [
+      488,
+      564,
+      302,
+      126
+    ],
+    "post_wait_freezes": {
+      "time": 250,
+      "rate_limit": 100,
+      "timeout": 2500
+    }
+  },
+  "closeDailyPaidGiftPage": {
+    "roi": [
+      356,
+      538,
+      210,
+      131
+    ]
+  },
+  "enterBoundaryAdvanceAction": {
+    "roi": [
+      1000,
+      130,
+      280,
+      130
+    ],
+    "expected": [
+      "^限时开[启户]$"
+    ],
+    "post_delay": 600,
+    "max_hit": 2,
+    "timeout": 5000,
+    "next": [
+      "[JumpBack]clickCloseWindowButton",
+      "clickBoundaryAdvanceTagButton",
+      "enterBoundaryAdvanceAction"
+    ],
+    "on_error": [
+      "MobileBoundaryUnavailable"
+    ]
+  },
+  "进入整备室": {
+    "roi": [
+      1049,
+      192,
+      231,
+      134
+    ]
+  },
+  "loungeButtonClick": {
+    "roi": [
+      736,
+      622,
+      153,
+      96
+    ]
+  },
+  "loungeConfirm": {
+    "roi": [
+      585,
+      603,
+      217,
+      117
+    ],
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "DispatchCenter-confirmEntrustedClaimPage": {
+    "roi": [
+      488,
+      0,
+      252,
+      112
+    ],
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "DispatchCenter-inDispatchCenter": {
+    "roi": [
+      401,
+      578,
+      249,
+      124
+    ],
+    "post_wait_freezes": {
+      "time": 250,
+      "target": [
+        0,
+        0,
+        230,
+        75
+      ],
+      "rate_limit": 100,
+      "timeout": 2500
+    },
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "DispatchCenter-dispatchFinishReward": {
+    "roi": [
+      981,
+      486,
+      243,
+      129
+    ]
+  },
+  "DispatchCenter-dispatchAgain": {
+    "roi": [
+      760,
+      576,
+      252,
+      127
+    ],
+    "post_wait_freezes": {
+      "time": 250,
+      "target": [
+        0,
+        0,
+        230,
+        75
+      ],
+      "rate_limit": 100,
+      "timeout": 2500
+    }
+  },
+  "点击空白处关闭-通用": {
+    "roi": [
+      250,
+      580,
+      780,
+      140
+    ],
+    "post_wait_freezes": {
+      "time": 250,
+      "rate_limit": 100,
+      "timeout": 2500
+    }
+  },
+  "DispatchCenter-enterDispatchIncomePage": {
+    "roi": [
+      661,
+      576,
+      252,
+      127
+    ],
+    "post_wait_freezes": {
+      "time": 250,
+      "target": [
+        0,
+        0,
+        230,
+        75
+      ],
+      "rate_limit": 100,
+      "timeout": 2500
+    }
+  },
+  "DispatchCenter-inDispatchIncome": {
+    "roi": [
+      0,
+      65,
+      249,
+      301
+    ],
+    "post_wait_freezes": {
+      "time": 250,
+      "target": [
+        0,
+        0,
+        230,
+        75
+      ],
+      "rate_limit": 100,
+      "timeout": 2500
+    },
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "DispatchCenter-enterIntelligenceStoragePage": {
+    "roi": [
+      0,
+      65,
+      248,
+      133
+    ]
+  },
+  "DispatchCenter-withdrawIntelligenceStorage": {
+    "roi": [
+      640,
+      455,
+      273,
+      123
+    ],
+    "post_wait_freezes": {
+      "time": 250,
+      "rate_limit": 100,
+      "timeout": 2500
+    }
+  },
+  "DispatchCenter-enterResourceProductionPage": {
+    "roi": [
+      0,
+      149,
+      248,
+      129
+    ]
+  },
+  "DispatchCenter-collectResourceProduction": {
+    "roi": [
+      873,
+      558,
+      209,
+      131
+    ],
+    "post_wait_freezes": {
+      "time": 250,
+      "rate_limit": 100,
+      "timeout": 2500
+    }
+  },
+  "首页进入活动层-活动层通用": {
+    "roi": [
+      1049,
+      266,
+      231,
+      134
+    ],
+    "post_wait_freezes": {
+      "time": 250,
+      "rate_limit": 100,
+      "timeout": 2500
+    }
+  },
+  "活动层加载中-活动层通用": {
+    "roi": [
+      900,
+      425,
+      288,
+      127
+    ],
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "已进入活动层-活动层通用": {
+    "roi": [
+      0,
+      0,
+      123,
+      99
+    ],
+    "post_wait_freezes": {
+      "time": 250,
+      "rate_limit": 100,
+      "timeout": 2500
+    },
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "形象管理-活动层通用": {
+    "roi": [
+      45,
+      0,
+      160,
+      97
+    ],
+    "post_wait_freezes": {
+      "time": 250,
+      "rate_limit": 100,
+      "timeout": 2500
+    }
+  },
+  "已进入形象管理菜单-活动层通用": {
+    "roi": [
+      508,
+      18,
+      260,
+      129
+    ],
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "确认当前形象为指挥官-活动层通用": {
+    "roi": [
+      124,
+      298,
+      217,
+      123
+    ],
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "点击地图-活动层通用": {
+    "roi": [
+      126,
+      0,
+      159,
+      100
+    ],
+    "post_wait_freezes": {
+      "time": 250,
+      "target": [
+        0,
+        576,
+        1280,
+        144
+      ],
+      "rate_limit": 100,
+      "timeout": 2500
+    }
+  },
+  "点击快捷前往-活动层通用": {
+    "roi": [
+      1000,
+      602,
+      253,
+      118
+    ]
+  },
+  "休憩大厅传送-活动层通用": {
+    "roi": [
+      814,
+      49,
+      267,
+      129
+    ],
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "进入美味烹调区域": {
+    "roi": [
+      753,
+      295,
+      253,
+      128
+    ],
+    "post_wait_freezes": {
+      "time": 250,
+      "rate_limit": 100,
+      "timeout": 2500
+    }
+  },
+  "选择常规菜品": {
+    "roi": [
+      0,
+      249,
+      165,
+      160
+    ],
+    "post_wait_freezes": {
+      "time": 250,
+      "rate_limit": 100,
+      "timeout": 2500
+    }
+  },
+  "已选择常规菜品": {
+    "roi": [
+      0,
+      252,
+      165,
+      157
+    ],
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "每天第一次免费美味烹调": {
+    "roi": [
+      40,
+      607,
+      604,
+      113
+    ],
+    "post_wait_freezes": {
+      "time": 250,
+      "rate_limit": 100,
+      "timeout": 2500
+    }
+  },
+  "邀请人形-美味烹调": {
+    "roi": [
+      934,
+      606,
+      226,
+      114
+    ],
+    "post_wait_freezes": {
+      "time": 250,
+      "rate_limit": 100,
+      "timeout": 2500
+    }
+  },
+  "确认邀请-美味烹调": {
+    "roi": [
+      924,
+      609,
+      248,
+      111
+    ],
+    "post_wait_freezes": {
+      "time": 250,
+      "rate_limit": 100,
+      "timeout": 2500
+    }
+  },
+  "跳过动画-美味烹调": {
+    "roi": [
+      978,
+      0,
+      302,
+      101
+    ],
+    "post_wait_freezes": {
+      "time": 250,
+      "rate_limit": 100,
+      "timeout": 2500
+    }
+  },
+  "确认结果-美味烹调": {
+    "roi": [
+      841,
+      467,
+      211,
+      130
+    ]
+  },
+  "活动层等级提升-活动层通用": {
+    "roi": [
+      470,
+      276,
+      336,
+      132
+    ],
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "进入茶歇一刻区域": {
+    "roi": [
+      754,
+      295,
+      291,
+      128
+    ]
+  },
+  "确认进入茶歇一刻": {
+    "roi": [
+      0,
+      29,
+      206,
+      128
+    ],
+    "next": [
+      "今日已饮用-茶歇一刻",
+      "选择饮品-茶歇一刻",
+      "滑动饮品列表-茶歇一刻",
+      "MobileNoStarredDrink"
+    ],
+    "post_wait_freezes": {
+      "time": 250,
+      "rate_limit": 100,
+      "timeout": 2500
+    },
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "进入逸趣导算页面": {
+    "roi": [
+      712,
+      0,
+      168,
+      103
+    ],
+    "post_wait_freezes": {
+      "time": 250,
+      "rate_limit": 100,
+      "timeout": 2500
+    }
+  },
+  "已进入逸趣导算页面": {
+    "roi": [
+      13,
+      157,
+      296,
+      127
+    ],
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "领取逸趣导算奖励": {
+    "roi": [
+      184,
+      561,
+      230,
+      128
+    ],
+    "post_wait_freezes": {
+      "time": 250,
+      "rate_limit": 100,
+      "timeout": 2500
+    }
+  },
+  "退出活动层-活动层通用": {
+    "roi": [
+      0,
+      0,
+      123,
+      99
+    ],
+    "post_wait_freezes": {
+      "time": 250,
+      "rate_limit": 100,
+      "timeout": 2500
+    }
+  },
+  "退出活动层确认-活动层通用": {
+    "roi": [
+      721,
+      475,
+      213,
+      130
+    ]
+  },
+  "打开战役推进-模拟作战通用": {
+    "roi": [
+      920,
+      13,
+      360,
+      156
+    ],
+    "post_wait_freezes": {
+      "time": 250,
+      "rate_limit": 100,
+      "timeout": 2500
+    }
+  },
+  "进入模拟作战页面-模拟作战通用": {
+    "roi": [
+      1014,
+      0,
+      252,
+      105
+    ],
+    "post_wait_freezes": {
+      "time": 250,
+      "rate_limit": 100,
+      "timeout": 2500
+    }
+  },
+  "已进入模拟作战页面-模拟作战通用": {
+    "roi": [
+      273,
+      521,
+      271,
+      133
+    ],
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "clickEnterCombatExercisePage": {
+    "roi": [
+      569,
+      521,
+      268,
+      133
+    ]
+  },
+  "combatExerciseWeeklySettlement": {
+    "roi": [
+      477,
+      585,
+      324,
+      126
+    ]
+  },
+  "领取周期奖励-实兵演习": {
+    "roi": [
+      0,
+      168,
+      236,
+      128
+    ],
+    "post_wait_freezes": {
+      "time": 250,
+      "rate_limit": 100,
+      "timeout": 2500
+    }
+  },
+  "已打开周期奖励-实兵演习": {
+    "roi": [
+      498,
+      54,
+      280,
+      137
+    ],
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "切换到参与奖励标签页-实兵演习": {
+    "roi": [
+      714,
+      131,
+      246,
+      128
+    ]
+  },
+  "关闭排名奖励-实兵演习": {
+    "roi": [
+      940,
+      74,
+      150,
+      102
+    ]
+  },
+  "enterAutoSweepBattleTask": {
+    "roi": [
+      920,
+      12,
+      360,
+      159
+    ]
+  },
+  "supplyOperation": {
+    "roi": [
+      832,
+      0,
+      252,
+      105
+    ]
+  },
+  "supplyOperationType": {
+    "roi": [
+      960,
+      283,
+      278,
+      137
+    ]
+  },
+  "clickAutoSweepBattleSupplyOperationButton": {
+    "roi": [
+      797,
+      586,
+      211,
+      131
+    ],
+    "next": [
+      "AutoSweepBattleSupplyOperationPrepareInsufficient",
+      "AutoSweepBattleSupplyOperationPrepareAccessoriesLimit",
+      "AutoSweepBattleSupplyOperationPrepareIsAccessories",
+      "AutoSweepBattleSupplyOperationPrepare",
+      "clickAutoSweepBattleSupplyOperationButton"
+    ],
+    "max_hit": 4,
+    "on_error": [
+      "MobileSweepUnrecognized"
+    ],
+    "post_wait_freezes": {
+      "time": 250,
+      "rate_limit": 100,
+      "timeout": 2500
+    }
+  },
+  "AutoSweepBattleSupplyOperationPrepare": {
+    "roi": [
+      502,
+      57,
+      275,
+      133
+    ],
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "increaseSlider": {
+    "roi": [
+      750,
+      324,
+      153,
+      104
+    ]
+  },
+  "scrollablePopupConfirm": {
+    "roi": [
+      722,
+      505,
+      212,
+      131
+    ]
+  },
+  "resultRecognition": {
+    "roi": [
+      488,
+      564,
+      302,
+      126
+    ],
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "AutoSweepBattleSupplyOperationPrepareInsufficient": {
+    "roi": [
+      550,
+      135,
+      180,
+      45
+    ],
+    "recognition": "OCR",
+    "only_rec": true,
+    "expected": "情报拼图补充",
+    "action": "Click",
+    "target": [
+      440,
+      525,
+      100,
+      45
+    ],
+    "post_delay": 500,
+    "next": [
+      "MobileStaminaFinished"
+    ],
+    "focus": {
+      "Node.Action.Starting": "体力不足：取消补充并结束扫荡（不用药水、不花货币）"
+    }
+  },
+  "confirmEntrustedClaimPage": {
+    "roi": [
+      500,
+      10,
+      760,
+      100
+    ],
+    "next": [
+      "[JumpBack]指挥官等级提升-通用",
+      "waitingForClaimPageLoading"
+    ],
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "oneKeyClaimCommissionReward": {
+    "roi": [
+      900,
+      570,
+      370,
+      140
+    ],
+    "next": [
+      "[JumpBack]指挥官等级提升-通用",
+      "oneKeyClaimCommissionReward",
+      "claimDailyActiveCommissionReward",
+      "enterJourneyWitnessTab"
+    ],
+    "post_wait_freezes": {
+      "time": 250,
+      "rate_limit": 100,
+      "timeout": 2500
+    }
+  },
+  "claimDailyActiveCommissionReward": {
+    "roi": [
+      900,
+      570,
+      370,
+      140
+    ],
+    "next": [
+      "[JumpBack]指挥官等级提升-通用",
+      "closeCommissionRewardResultPage",
+      "oneKeyClaimCommissionReward",
+      "enterJourneyWitnessTab"
+    ]
+  },
+  "clickHomeButton": {
+    "roi": [
+      0,
+      0,
+      270,
+      150
+    ],
+    "post_wait_freezes": {
+      "time": 250,
+      "target": true,
+      "rate_limit": 100,
+      "timeout": 2500
+    }
+  },
+  "返回上一页-通用": {
+    "roi": [
+      0,
+      0,
+      180,
+      140
+    ]
+  },
+  "HomePage": {
+    "roi": [
+      990,
+      50,
+      250,
+      80
+    ],
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "StartGame_HomePage_Check": {
+    "roi": [
+      990,
+      50,
+      250,
+      80
+    ],
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "指挥官等级提升-通用": {
+    "roi": [
+      480,
+      395,
+      320,
+      100
+    ],
+    "expected": [
+      "^指挥官等级提升$"
+    ],
+    "target": [
+      600,
+      440,
+      80,
+      40
+    ],
+    "post_delay": 500
+  },
+  "returnToHomePage": {
+    "next": [
+      "HomePage",
+      "MobileHomeRecovery"
+    ],
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "MobileHomeRecovery": {
+    "next": [
+      "MobileRecovery0",
+      "MobileRecovery1",
+      "MobileRecovery2",
+      "MobileRecovery3",
+      "MobileRecovery4",
+      "MobileRecovery5",
+      "退出活动层-活动层通用",
+      "StartGame"
+    ],
+    "timeout": 12000
+  },
+  "StartGame": {
+    "next": [
+      "StartGame_HomePage_Check",
+      "MobileStartTitleGate"
+    ],
+    "rate_limit": 300,
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "MobileStartTitleGate": {
+    "next": [
+      "MobileStartClick",
+      "MobileStartRecovery"
+    ]
+  },
+  "MobileStartRecovery": {
+    "next": [
+      "MobileStartup0",
+      "MobileStartup2",
+      "MobileStartup3",
+      "MobileStartup4",
+      "MobileStartup5",
+      "MobileStartup6",
+      "MobileStartup7",
+      "退出活动层-活动层通用",
+      "MobileStartup9",
+      "MobileStartup10",
+      "MobileStartup11",
+      "MobileStartup13",
+      "MobileStartup14",
+      "MobileStartup15",
+      "MobileStartup16"
+    ],
+    "timeout": 0,
+    "rate_limit": 750,
+    "on_error": [
+      "StartGame"
+    ]
+  },
+  "StartGame_loadingSource": {
+    "roi": [
+      250,
+      420,
+      780,
+      210
+    ]
+  },
+  "StartGame_notLoginIn": {
+    "roi": [
+      270,
+      120,
+      760,
+      510
+    ]
+  },
+  "StartGame_retryLogin": {
+    "roi": [
+      300,
+      350,
+      680,
+      330
+    ]
+  },
+  "StartGame_restartGF2Game": {
+    "roi": [
+      350,
+      350,
+      580,
+      300
+    ]
+  },
+  "StartGame_downloadResource": {
+    "roi": [
+      180,
+      150,
+      920,
+      480
+    ]
+  },
+  "StartGame_unzipResources": {
+    "roi": [
+      250,
+      400,
+      780,
+      240
+    ]
+  },
+  "点击情报补给标签页": {
+    "roi": [
+      0,
+      100,
+      410,
+      600
+    ]
+  },
+  "点击七日签到资源标签页": {
+    "roi": [
+      0,
+      100,
+      410,
+      600
+    ]
+  },
+  "今日已饮用-茶歇一刻": {
+    "roi": [
+      400,
+      350,
+      880,
+      370
+    ]
+  },
+  "MobileNoStarredDrink": {
+    "focus": {
+      "Node.Action.Starting": "未找到可用星标饮品：茶歇未制作，请先在游戏中收藏饮品"
+    },
+    "next": [
+      "返回活动层-活动层通用"
+    ]
+  },
+  "滑动饮品列表-茶歇一刻": {
+    "next": [
+      "选择饮品-茶歇一刻",
+      "滑动饮品列表-茶歇一刻",
+      "MobileNoStarredDrink"
+    ],
+    "post_wait_freezes": {
+      "time": 250,
+      "target": [
+        30,
+        100,
+        280,
+        460
+      ],
+      "timeout": 2500,
+      "rate_limit": 100
+    }
+  },
+  "MobileBoundaryUnavailable": {
+    "focus": {
+      "Node.Action.Starting": "边界推进入口不可用，本项跳过；请手动确认当期开放状态"
+    },
+    "next": [
+      "returnToHomePage"
+    ]
+  },
+  "clickBoundaryAdvanceTagButton": {
+    "timeout": 5000,
+    "on_error": [
+      "MobileBoundaryUnavailable"
+    ]
+  },
+  "closeCommissionRewardResultPage": {
+    "next": [
+      "[JumpBack]指挥官等级提升-通用",
+      "closeCommissionRewardResultPage",
+      "enterJourneyWitnessTab"
+    ],
+    "roi": [
+      250,
+      580,
+      780,
+      140
+    ]
+  },
+  "开始委托领取任务": {
+    "next": [
+      "[JumpBack]指挥官等级提升-通用",
+      "enterCommissionToClaimTask",
+      "[JumpBack]returnToHomePage"
+    ]
+  },
+  "enterCommissionToClaimTask": {
+    "next": [
+      "[JumpBack]指挥官等级提升-通用",
+      "confirmEntrustedClaimPage",
+      "enterCommissionToClaimTask"
+    ],
+    "post_wait_freezes": {
+      "time": 250,
+      "rate_limit": 100,
+      "timeout": 2500
+    }
+  },
+  "waitingForClaimPageLoading": {
+    "next": [
+      "[JumpBack]指挥官等级提升-通用",
+      "oneKeyClaimCommissionReward",
+      "claimDailyActiveCommissionReward",
+      "enterJourneyWitnessTab"
+    ],
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "enterJourneyWitnessTab": {
+    "next": [
+      "[JumpBack]指挥官等级提升-通用",
+      "claimJourneyWitnessReward",
+      "enterJourneyMileStoneTab"
+    ]
+  },
+  "claimJourneyWitnessReward": {
+    "next": [
+      "[JumpBack]指挥官等级提升-通用",
+      "closeClaimJourneyWitnessRewardResultPage"
+    ],
+    "roi": [
+      900,
+      570,
+      370,
+      140
+    ]
+  },
+  "closeClaimJourneyWitnessRewardResultPage": {
+    "next": [
+      "[JumpBack]指挥官等级提升-通用",
+      "closeClaimJourneyWitnessRewardResultPage",
+      "enterJourneyMileStoneTab"
+    ],
+    "roi": [
+      250,
+      580,
+      780,
+      140
+    ]
+  },
+  "enterJourneyMileStoneTab": {
+    "next": [
+      "[JumpBack]指挥官等级提升-通用",
+      "claimJourneyMileStoneReward",
+      "returnToHomePage"
+    ]
+  },
+  "claimJourneyMileStoneReward": {
+    "next": [
+      "[JumpBack]指挥官等级提升-通用",
+      "claimJourneyMileStoneReward",
+      "closeClaimJourneyMileStoneRewardResultPage",
+      "MobileCommissionNoMoreClaim"
+    ],
+    "roi": [
+      900,
+      570,
+      370,
+      140
+    ]
+  },
+  "closeClaimJourneyMileStoneRewardResultPage": {
+    "next": [
+      "[JumpBack]指挥官等级提升-通用",
+      "closeClaimJourneyMileStoneRewardResultPage",
+      "returnToHomePage"
+    ],
+    "roi": [
+      250,
+      580,
+      780,
+      140
+    ]
+  },
+  "MobileCommissionNoMoreClaim": {
+    "recognition": "OCR",
+    "expected": "^战勋记录$",
+    "roi": [
+      20,
+      90,
+      230,
+      90
+    ],
+    "next": [
+      "returnToHomePage"
+    ]
+  },
+  "MobileStaminaFinished": {
+    "next": [
+      "returnToHomePage"
+    ]
+  },
+  "MobileSweepUnrecognized": {
+    "focus": {
+      "Node.Action.Starting": "扫荡状态未识别，已停止本项以避免重复点击"
+    },
+    "next": [
+      "returnToHomePage"
+    ]
+  },
+  "打开活动页-情报补给": {
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "打开活动页-七日签到资源": {
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "返回首页-领取邮件": {
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "clickEmailsButton": {
+    "post_wait_freezes": {
+      "time": 250,
+      "rate_limit": 100,
+      "timeout": 2500
+    }
+  },
+  "noUnclaimedItems": {
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "返回首页-商城免费每日补给箱购买": {
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "clickTimeLimitedGiftPackage": {
+    "post_wait_freezes": {
+      "time": 250,
+      "rate_limit": 100,
+      "timeout": 2500
+    }
+  },
+  "clickPermanentGiftPackage": {
+    "post_wait_freezes": {
+      "time": 250,
+      "rate_limit": 100,
+      "timeout": 2500
+    }
+  },
+  "clickDailySupplyBox": {
+    "post_wait_freezes": {
+      "time": 250,
+      "rate_limit": 100,
+      "timeout": 2500
+    }
+  },
+  "checkDailyPaidGift": {
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "返回首页-边界推进委托领取": {
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "DispatchCenter-claimDispatchCountReward": {
+    "post_wait_freezes": {
+      "time": 250,
+      "target": [
+        0,
+        0,
+        230,
+        75
+      ],
+      "rate_limit": 100,
+      "timeout": 2500
+    }
+  },
+  "任务开始前进入活动层-活动层通用": {
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "切换形象为指挥官-活动层通用": {
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "确认勾选指挥官形象-活动层通用": {
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "开始美味烹调任务": {
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "前往休憩大厅-美味烹调": {
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "返回活动层-活动层通用": {
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "进入活动层-活动层通用": {
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "开始茶歇一刻任务": {
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "前往休憩大厅-茶歇一刻": {
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "已解锁茶歇一刻": {
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "开始逸趣导算任务": {
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "打开模拟作战页-实兵演习": {
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "supplyOperationReady": {
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "supplyOperationAutoSweepButtonDisabled": {
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "increaseSliderMax": {
+    "pre_delay": 0,
+    "post_delay": 0
+  },
+  "MobileRecovery0": {
+    "recognition": "OCR",
+    "expected": [
+      "^指挥官等级提升$"
+    ],
+    "roi": [
+      480,
+      395,
+      320,
+      100
+    ],
+    "action": "Click",
+    "target": [
+      600,
+      440,
+      80,
+      40
+    ],
+    "post_delay": 500,
+    "next": [
+      "returnToHomePage"
+    ]
+  },
+  "MobileRecovery1": {
+    "recognition": "OCR",
+    "expected": [
+      "点击空白处关闭",
+      "点击任意位置继续",
+      "点击屏幕任意位置继续"
+    ],
+    "action": "Click",
+    "post_wait_freezes": {
+      "time": 250,
+      "rate_limit": 100,
+      "timeout": 2500
+    },
+    "roi": [
+      250,
+      580,
+      780,
+      140
+    ],
+    "next": [
+      "returnToHomePage"
+    ]
+  },
+  "MobileRecovery2": {
+    "recognition": "TemplateMatch",
+    "template": [
+      "公用按钮组件/关闭按钮_gray.png",
+      "公用按钮组件/关闭按钮_black.png",
+      "公用按钮组件/智能导航光屏关闭按钮_gray.png"
+    ],
+    "action": "Click",
+    "green_mask": true,
+    "order_by": "Score",
+    "threshold": 0.8,
+    "post_wait_freezes": {
+      "time": 250,
+      "target": true,
+      "rate_limit": 100,
+      "timeout": 2500
+    },
+    "roi": [
+      800,
+      0,
+      480,
+      280
+    ],
+    "next": [
+      "returnToHomePage"
+    ]
+  },
+  "MobileRecovery3": {
+    "recognition": "TemplateMatch",
+    "template": [
+      "公用按钮组件/主页按钮_gray.png",
+      "公用按钮组件/主页按钮_black.png"
+    ],
+    "roi": [
+      0,
+      0,
+      270,
+      150
+    ],
+    "action": "Click",
+    "green_mask": true,
+    "order_by": "Score",
+    "threshold": 0.8,
+    "post_wait_freezes": {
+      "time": 250,
+      "target": true,
+      "rate_limit": 100,
+      "timeout": 2500
+    },
+    "next": [
+      "returnToHomePage"
+    ]
+  },
+  "MobileRecovery4": {
+    "recognition": "TemplateMatch",
+    "template": [
+      "公用按钮组件/返回上一页_gray_v2.png",
+      "公用按钮组件/返回上一页_black_v2.png"
+    ],
+    "action": "Click",
+    "green_mask": true,
+    "order_by": "Score",
+    "threshold": 0.8,
+    "post_wait_freezes": {
+      "time": 250,
+      "target": true,
+      "rate_limit": 100,
+      "timeout": 2500
+    },
+    "roi": [
+      0,
+      0,
+      180,
+      140
+    ],
+    "next": [
+      "returnToHomePage"
+    ]
+  },
+  "MobileRecovery5": {
+    "doc": "Dismiss the first voyage introduction; does not match the paid 航线解锁 button",
+    "recognition": "OCR",
+    "expected": "^开启远航巡录$",
+    "roi": [
+      100,
+      580,
+      320,
+      100
+    ],
+    "action": "Click",
+    "post_delay": 1000,
+    "max_hit": 1,
+    "focus": {
+      "Node.Action.Starting": "处理远航巡录首次介绍（不购买）"
+    },
+    "next": [
+      "returnToHomePage"
+    ]
+  },
+  "MobileStartup0": {
+    "doc": "Dismiss the first voyage introduction; does not match the paid 航线解锁 button",
+    "recognition": "OCR",
+    "expected": "^开启远航巡录$",
+    "roi": [
+      100,
+      580,
+      320,
+      100
+    ],
+    "action": "Click",
+    "post_delay": 1000,
+    "max_hit": 1,
+    "focus": {
+      "Node.Action.Starting": "处理远航巡录首次介绍（不购买）"
+    },
+    "next": [
+      "StartGame"
+    ]
+  },
+  "MobileStartup2": {
+    "doc": "外服进入主页后仍可能需要等待loading",
+    "recognition": "FeatureMatch",
+    "post_delay": 2000,
+    "green_mask": true,
+    "template": [
+      "其他/loading_green_1.png",
+      "其他/loading_green_2.png"
+    ],
+    "roi": [
+      482,
+      215,
+      309,
+      278
+    ],
+    "next": [
+      "StartGame"
+    ]
+  },
+  "MobileStartup3": {
+    "recognition": "TemplateMatch",
+    "template": [
+      "公用按钮组件/关闭按钮_gray.png",
+      "公用按钮组件/关闭按钮_black.png",
+      "公用按钮组件/智能导航光屏关闭按钮_gray.png"
+    ],
+    "action": "Click",
+    "green_mask": true,
+    "order_by": "Score",
+    "threshold": 0.8,
+    "post_wait_freezes": {
+      "time": 250,
+      "target": true,
+      "rate_limit": 100,
+      "timeout": 2500
+    },
+    "roi": [
+      800,
+      0,
+      480,
+      280
+    ],
+    "next": [
+      "StartGame"
+    ]
+  },
+  "MobileStartup4": {
+    "recognition": "TemplateMatch",
+    "template": [
+      "公用按钮组件/主页按钮_gray.png",
+      "公用按钮组件/主页按钮_black.png"
+    ],
+    "roi": [
+      0,
+      0,
+      270,
+      150
+    ],
+    "action": "Click",
+    "green_mask": true,
+    "order_by": "Score",
+    "threshold": 0.8,
+    "post_wait_freezes": {
+      "time": 250,
+      "target": true,
+      "rate_limit": 100,
+      "timeout": 2500
+    },
+    "next": [
+      "StartGame"
+    ]
+  },
+  "MobileStartup5": {
+    "recognition": "TemplateMatch",
+    "template": [
+      "公用按钮组件/返回上一页_gray_v2.png",
+      "公用按钮组件/返回上一页_black_v2.png"
+    ],
+    "action": "Click",
+    "green_mask": true,
+    "order_by": "Score",
+    "threshold": 0.8,
+    "post_wait_freezes": {
+      "time": 250,
+      "target": true,
+      "rate_limit": 100,
+      "timeout": 2500
+    },
+    "roi": [
+      0,
+      0,
+      180,
+      140
+    ],
+    "next": [
+      "StartGame"
+    ]
+  },
+  "MobileStartup6": {
+    "recognition": "OCR",
+    "expected": [
+      "点击空白处关闭",
+      "点击任意位置继续",
+      "点击屏幕任意位置继续"
+    ],
+    "action": "Click",
+    "post_wait_freezes": {
+      "time": 250,
+      "rate_limit": 100,
+      "timeout": 2500
+    },
+    "roi": [
+      250,
+      580,
+      780,
+      140
+    ],
+    "next": [
+      "StartGame"
+    ]
+  },
+  "MobileStartup7": {
+    "recognition": "OCR",
+    "expected": [
+      "^指挥官等级提升$"
+    ],
+    "roi": [
+      480,
+      395,
+      320,
+      100
+    ],
+    "action": "Click",
+    "target": [
+      600,
+      440,
+      80,
+      40
+    ],
+    "post_delay": 500,
+    "next": [
+      "StartGame"
+    ]
+  },
+  "MobileStartup9": {
+    "recognition": "OCR",
+    "expected": [
+      "资源加载中"
+    ],
+    "roi": [
+      250,
+      420,
+      780,
+      210
+    ],
+    "next": [
+      "StartGame"
+    ]
+  },
+  "MobileStartup10": {
+    "doc": "外服用户登录可能需要重试/确定用户协议",
+    "recognition": "OCR",
+    "expected": [
+      "重试",
+      "确定"
+    ],
+    "action": "Click",
+    "roi": [
+      300,
+      350,
+      680,
+      330
+    ],
+    "next": [
+      "StartGame"
+    ]
+  },
+  "MobileStartup11": {
+    "doc": "用户未登录，弹出登录提示，直接退出游戏",
+    "recognition": "OCR",
+    "expected": [
+      "登录方式",
+      "使用游客登录",
+      "散爆ID",
+      "通过Google登录",
+      "通过邮箱登录"
+    ],
+    "post_wait_freezes": 0,
+    "focus": {
+      "Node.Action.Starting": "用户未登录，请先登录游戏"
+    },
+    "action": "StopTask",
+    "roi": [
+      270,
+      120,
+      760,
+      510
+    ]
+  },
+  "MobileStartup13": {
+    "recognition": "OCR",
+    "expected": "确认",
+    "action": "Click",
+    "roi": [
+      350,
+      350,
+      580,
+      300
+    ],
+    "next": [
+      "StartGame"
+    ]
+  },
+  "MobileStartup14": {
+    "recognition": "OCR",
+    "expected": "下载资源",
+    "roi": [
+      180,
+      150,
+      920,
+      480
+    ],
+    "next": [
+      "StartGame"
+    ]
+  },
+  "MobileStartup15": {
+    "recognition": "OCR",
+    "expected": "解压",
+    "roi": [
+      250,
+      400,
+      780,
+      240
+    ],
+    "next": [
+      "StartGame"
+    ]
+  },
+  "MobileStartup16": {
+    "action": "StartApp",
+    "max_hit": 1,
+    "package": "com.Sunborn.SnqxExilium/.ExiliumMainActivity",
+    "next": [
+      "StartGame"
+    ],
+    "post_delay": 6000
+  },
+  "MobileStartClick": {
+    "recognition": "OCR",
+    "expected": [
+      "点击开始",
+      "击开始$",
+      "点击开"
+    ],
+    "action": "Click",
+    "post_delay": 1800,
+    "max_hit": 3,
+    "roi": [
+      460,
+      560,
+      350,
+      80
+    ],
+    "next": [
+      "StartGame"
+    ]
+  }
+}

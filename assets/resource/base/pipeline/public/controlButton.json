@@ -2,8 +2,9 @@
     "returnToHomePage": {
         "doc": "除特殊页面，一般都可通过下列按键回到主页。从出现次数多到少/最短路径依次匹配，可减少不必要的匹配",
         "next": [
-            "[JumpBack]clickCloseWindowButton",
+            "[JumpBack]dismissVoyageFirstIntro",
             "HomePage",
+            "[JumpBack]clickCloseWindowButton",
             "[JumpBack]clickHomeButton",
             "[JumpBack]clickBackButton",
             "[JumpBack]点击空白处关闭-通用",
@@ -11,6 +12,18 @@
             "[JumpBack]退出活动层-活动层通用",
             "[JumpBack]StartGame"
         ]
+    },
+    "dismissVoyageFirstIntro": {
+        "doc": "Dismiss the first voyage introduction; does not match the paid 航线解锁 button",
+        "recognition": "OCR",
+        "expected": "^开启远航巡录$",
+        "roi": [100, 580, 320, 100],
+        "action": "Click",
+        "post_delay": 1000,
+        "max_hit": 1,
+        "focus": {
+            "Node.Action.Starting": "处理远航巡录首次介绍（不购买）"
+        }
     },
     "clickHomeButton": {
         "recognition": "TemplateMatch",
@@ -89,14 +102,6 @@
     "HomePage": {
         "recognition": "OCR",
         "expected": "战役推进",
-        "pre_wait_freezes": {
-            "time": 500,
-            "target": [
-                0,
-                0,
-                200,
-                70
-            ]
-        }
+        "roi": [1000, 30, 280, 120]
     }
 }

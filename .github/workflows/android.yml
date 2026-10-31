@@ -1,29 +1,6 @@
 name: Build Android APK
 
 on:
-  push:
-    branches: [main, master]
-    paths:
-      - "Android/**"
-      - "assets/**"
-      - "agent/**"
-      - "pyproject.toml"
-      - "requirements.txt"
-      - "imgs/图标2.png"
-      - "LICENSE"
-      - ".gitmodules"
-      - ".github/workflows/android*.yml"
-  pull_request:
-    paths:
-      - "Android/**"
-      - "assets/**"
-      - "agent/**"
-      - "pyproject.toml"
-      - "requirements.txt"
-      - "imgs/图标2.png"
-      - "LICENSE"
-      - ".gitmodules"
-      - ".github/workflows/android*.yml"
   workflow_dispatch:
     inputs:
       assemble:
@@ -43,5 +20,5 @@ jobs:
   build-android:
     uses: ./.github/workflows/android-build.yml
     with:
-      assemble: ${{ github.event_name == 'workflow_dispatch' && inputs.assemble || 'debug' }}
+      assemble: ${{ inputs.assemble }}
     secrets: inherit

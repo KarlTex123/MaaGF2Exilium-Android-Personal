@@ -1,0 +1,14 @@
+diff --git a/app/src/main/java/com/aliothmoon/maafw/remote/internal/PermissionGrantHelper.kt b/app/src/main/java/com/aliothmoon/maafw/remote/internal/PermissionGrantHelper.kt
+index 4f2fcab..071872c 100644
+--- a/app/src/main/java/com/aliothmoon/maafw/remote/internal/PermissionGrantHelper.kt
++++ b/app/src/main/java/com/aliothmoon/maafw/remote/internal/PermissionGrantHelper.kt
+@@ -115,7 +115,8 @@ object PermissionGrantHelper {
+                 RemoteUtils.shellExec("am set-bg-restriction-level $packageName unrestricted")
+             }
+ 
+-            disablePhantomProcessKiller()
++            // Local deployment: leave system-wide process management unchanged.
++            // App-specific background permission grants above are sufficient to try first.
+ 
+             Ln.i("$TAG: Background unrestricted for $packageName")
+             true
