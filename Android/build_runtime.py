@@ -30,6 +30,29 @@ PLATFORMS = {"arm64-v8a": "aarch64-linux-android", "x86_64": "x86_64-linux-andro
 CHAQUOPY_INDEXES = {"3.13": "https://chaquo.com/pypi-13.1/"}
 
 
+def strip_windows_launchers(bundle):
+    """Remove host-only entry points that can embed the build machine's paths."""
+    archive_path = bundle / "site-packages" / "pure.zip"
+    temporary = archive_path.with_suffix(".sanitized.zip")
+    try:
+        with zipfile.ZipFile(archive_path) as archive:
+            removed = [entry.filename for entry in archive.infolist()
+                       if entry.filename.replace("\\", "/").split("/")[0].lower() in {"bin", "scripts"}
+                       and entry.filename.lower().endswith(".exe")]
+            if not removed:
+                return []
+            with zipfile.ZipFile(temporary, "w") as cleaned:
+                cleaned.comment = archive.comment
+                for entry in archive.infolist():
+                    if entry.filename not in removed:
+                        cleaned.writestr(entry, archive.read(entry))
+        temporary.replace(archive_path)
+    finally:
+        temporary.unlink(missing_ok=True)
+    print(f"Removed unused Windows launchers: {', '.join(removed)}", flush=True)
+    return removed
+
+
 def validate_core(bundle, abi, python_version, framework_version):
     manifest = json.loads((bundle / "agent-core.json").read_text(encoding="utf-8"))
     if (manifest.get("abi") != abi or manifest.get("python") != python_version
@@ -149,6 +172,7 @@ def build_runtime(abis, root=ROOT, framework_tag="v5.14.3"):
             sys.executable, str(builder), "--out", str(output), "--core-tag", core_tag, "--abi", abi,
             "--requirements", str(requirements), "--no-deps", "--extra-index-url", index,
         ], cwd=frontend, check=True)
+        strip_windows_launchers(output / abi / "bundle")
         validate_core(output / abi / "bundle", abi, python_version, version)
     print(f"Verified MaaFramework {version} + agent core {core_tag}: {', '.join(abis)}")
 

@@ -18,7 +18,7 @@
 git clone --recurse-submodules https://github.com/KarlTex123/MaaGF2Exilium-Android-Personal.git
 cd MaaGF2Exilium-Android-Personal
 python Android/apply_patches.py
-python Android/prepare.py --version personal-speedfix5 --repository KarlTex123/MaaGF2Exilium-Android-Personal
+python Android/prepare.py --version personal-speedfix5-r1 --repository KarlTex123/MaaGF2Exilium-Android-Personal
 python Android/build_runtime.py --abis arm64-v8a --framework-tag v5.14.3
 ```
 
@@ -52,6 +52,10 @@ build.ndkVersion=29.0.13113456
 
 新增内容仅含源码、通用流水线数据、小图标、补丁及脱敏说明。两张新增PNG仅含导航/邮件图标，已人工查看，没有账号区域。
 
-不上传设备序列号、账号/UID、个人联系方式、配置UUID、原始手机日志/截图、ADB路径、本机用户名和绝对路径、APK、密钥、令牌、SDK及缓存。原始部署记录和个人配置备份保留在本机工作区，不属于本仓库。
+不上传设备序列号、账号/UID、个人联系方式、配置UUID、原始手机日志/截图、ADB路径、本机用户名和绝对路径、密钥、令牌、SDK及缓存。原始部署记录和个人配置备份保留在本机工作区，不属于本仓库。APK 作为经过检查的 Releases 附件发布，不加入 Git 源码历史。
+
+`personal-speedfix5-r1` 的运行时打包会移除 `pure.zip` 内安卓用不到的 `bin/*.exe` / `Scripts/*.exe` Windows 启动程序。这些程序可能携带构建机 Python 的绝对路径。其他运行时条目保留不变；该修订不改变游戏任务逻辑。公开安装包须重新扫描 APK 及其嵌套 ZIP，不能把源码检查代替安装包检查。
+
+Shizuku 检查范围见 [Shizuku 代码检查](shizuku-review.md)。本维护版以 Root 作为验证和维护路径。
 
 原项目已有公开作者信息、许可证及提交历史保留。新增维护提交使用 GitHub noreply 邮箱，避免把维护者私人邮箱写入提交元数据。

@@ -22,7 +22,9 @@
 
 ## 使用与构建
 
-当前以源码维护为主，没有配置手机自动更新或自动发布。首次建仓没有发布手机现用 APK。手动 Android 构建入口保留，云端临时 debug 签名不能保证覆盖个人手机现有安装；长期更新需要沿用原签名，密钥在代码库之外单独保存。
+测试安装包见 [Releases](https://github.com/KarlTex123/MaaGF2Exilium-Android-Personal/releases)。`personal-speedfix5-r1` 在原 speedfix5 的任务逻辑上移除安卓用不到的 Windows 启动程序，避免依赖包夹带本机构建路径。该版本使用本地 debug 签名，非官方发行包；完整日常、周常仍待验收。
+
+当前按 Root 方式维护。Shizuku 只完成[代码检查](docs/android-personal/shizuku-review.md)，没有实机验证。未配置手机自动更新或自动发布。手动 Android 构建入口保留，云端临时 debug 签名不能保证覆盖个人手机现有安装；长期更新需要沿用原签名，密钥在代码库之外单独保存。
 
 构建方法、验证范围和上传内容说明见 [安卓维护说明](docs/android-personal/maintenance.md)。本仓库没有上传个人手机配置、账号信息、设备日志、调试截图、签名密钥或本地工具链。
 
