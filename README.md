@@ -1,6 +1,6 @@
 # MaaGF2Exilium Android Personal
 
-《少女前线2：追放》安卓手机独立运行的个人维护版，基于 [DarkLingYun/MaaGF2Exilium](https://github.com/DarkLingYun/MaaGF2Exilium) 和 [Aliothmoon/MaaFwApp](https://github.com/Aliothmoon/MaaFwApp)。当前基线为 `speedfix5`。
+《少女前线2：追放》安卓手机独立运行的个人维护版，基于 [DarkLingYun/MaaGF2Exilium](https://github.com/DarkLingYun/MaaGF2Exilium) 和 [Aliothmoon/MaaFwApp](https://github.com/Aliothmoon/MaaFwApp)。当前基线为上游 `v2.8.1` 加个人 `speedfix5` 修复。
 
 本仓库保留原项目历史及许可证；原版说明见 [README.upstream.md](README.upstream.md)。本地修改以源码提交和安卓外壳补丁保存，可以在干净检出后重新应用。
 
